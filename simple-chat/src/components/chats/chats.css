@@ -1,0 +1,236 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 20px;
+}
+
+.form {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(25, 25, 25, 0.32);
+
+ 
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #8E24AA; 
+    border-bottom: 1px solid #ccc; 
+    color: #fff;
+    height: 90px;
+    font-size: 35px;
+}
+
+.exit-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.search-button, .options-button {
+    margin-left: 15px; 
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#loupe {
+    right: 2vh;
+    border: none; 
+    background: transparent;
+    cursor: pointer; 
+    bottom: 1vh;
+    font-size: 3.5vh;
+    color: #ffffff;
+}
+
+#loupe:hover {
+    animation: pulse 2s infinite;
+}
+
+#more_vert {
+    right: 2vh;
+    border: none; 
+    background: transparent;
+    cursor: pointer; 
+    bottom: 1vh;
+    font-size: 3.5vh;
+    color: #ffffff;
+    margin:0 0.7vh 0 1vh;
+}
+
+#more_vert:hover {
+    animation: pulse 2s infinite;
+}
+
+.chats {
+    margin-top: 11vh;
+    padding: 15px;
+    overflow: hidden; 
+}
+.chat {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+    height: calc(800px/8);
+    align-items: center;
+    transition: transform 0.2s ease;
+    text-wrap: nowrap;
+}
+
+.chat:hover {
+ background-color: rgb(224, 224, 224);
+ transform: scale(1.05);
+}
+
+.name-content {
+    width: 100%;
+    border-bottom: solid grey 1px;
+    padding: 20px;
+}
+.lasttext {
+    margin-top: 10px;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.create-button {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+#add-button {
+    width: 80px;
+    border-radius: 50%;
+    aspect-ratio: 1/1; 
+    font-size: 50px;
+    border: none;
+}
+#add-button:hover {
+    background-color: #8E24AA;
+    animation: pulse 2s infinite;
+    transform: scale(1.2);
+}
+
+.close {
+    width: fit-content;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+#chat-image {
+    margin-bottom: 5px;
+}
+
+#chat-name {
+    margin-top: 5px;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.div-chat-img {
+    min-width: 100px; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-right: 15px; 
+}
+
+.chat-img {
+    border-radius: 50%;
+    width: 90%; 
+    aspect-ratio: 1/1;   
+    max-height: 100%;
+    max-width: 100px; 
+}
+
+.lasttext {
+    opacity: 60%;
+    font-size: 15px;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+        box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
